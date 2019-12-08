@@ -1,0 +1,80 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Text Area 1,Text Area 2,Text Area 3
+1,Page,,,,,,,,,UML Class,,
+2,Class,UML,1,,,,,,,Group,"- number_of_members : int
+- students : student *
+- head_student :  student *
+- requested_students : student *
+- requested_to_students : student *","+ delete_group ( )
++ request_to ( )
++ accept_request ( )
++ change_head ( )
++ change_details ( )
++ add_request ( )
++ show_details ( )"
+3,Class,UML,1,,,,,,,Person,"- username : string
+- password : string
+- name : string
+- age : int
+- gender : boolean
+- national_id : string
+- birth_date : date
+- origin_city : string","+ login ( )
++ set_personal_info ( )
++ show_details  ( )"
+4,Class,UML,1,,,,,,,Student,"- student_id : string
+- grade : string
+- is_elite : boolean
+- field : string
+- season : string
+- period : string","+ make_group ( )
++ request_to_join_group ( )
++ accept_request ( )
++ change_details ( )
++ show_details ( )"
+5,Class,UML,1,,,,,,,Admin,"- admin_id : string
+- level : string
+- discription : string
+- work_hours : string
+- work_days : string
+- employee_date : date","+ show_group ( )
++ show_student ( )
++ show_dorms ( )
++ show_rooms ( )
++ get_report ( )
++ import_date ( )"
+6,Class,UML,1,,,,,,,Dorm,"- name : string
+- subset : string
+- subset_of : string
+- facilities : string
+- mounthly_costs : int
+- number_of_floors : int
+- number_of_rooms : int
+- is_usable : boolean
+- discription : string
+- rooms : room *
+- available_rooms : room *","+ show_room ( )
++ change_details ( )
++ show_details ( )
++ show_all_rooms ( )
++ delete_room ( )"
+7,Class,UML,1,,,,,,,Room,"- number : string
+- subset : string
+- subset_of : string
+- facilities : string
+- mounthly_costs : int
+- floor : int
+- capacity: int
+- is_usable : boolean
+- discription : string
+- is_reserved : boolean
+- reserve : group *","+ show_reserve ( )
++ change_details ( )
++ show_details ( )
++ reserve ( )
++ cancell_reserve ( )
++ delete_room ( )"
+8,Line,,1,,,4,3,None,Arrow,,,
+9,Line,,1,,,5,3,None,Arrow,,,
+10,Line,,1,,,7,6,None,Arrow,,,
+11,Line,,1,,,4,2,None,Arrow,,,
+12,Page,,,,,,,,,Page 2,,
